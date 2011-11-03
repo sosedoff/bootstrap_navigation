@@ -41,8 +41,8 @@ module Bootstrap
       yield self if block_given?
     end
     
-    def link(title, url='#')
-      @menu_items << MenuItem.new(title, url)
+    def link(title, url='#', options={})
+      @menu_items << MenuItem.new(title, url, options)
     end
     
     def menu(title, options={})

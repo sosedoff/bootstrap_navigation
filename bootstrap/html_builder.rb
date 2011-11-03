@@ -23,13 +23,18 @@ module Bootstrap
     end
     
     def build_menu(node, item)
-      node.li do |li|
+      css_class = item.options[:active] == true ? "active" : "normal"
+      
+      node.li(:class => css_class) do |li|
         li.a(item.title, :href => item.url)
       end
     end
     
     def build_submenu(node, item)
-      node.li(:class => "dropdown", 'data-dropdown' => "dropdown") do |li|
+      css_class = "dropdown "
+      css_class << "active" if item.options[:active] == true
+
+      node.li(:class => css_class.strip, 'data-dropdown' => "dropdown") do |li|
         li.a(item.title, :href => "#", :class => "dropdown-toggle")
         li.ul(:class => "dropdown-menu") do |ul|
           item.menu_items.each do |subitem|
