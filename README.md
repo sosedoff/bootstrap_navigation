@@ -6,7 +6,7 @@ This is a simple builder-powered helper to generate bootstrap navigation panel
 
 Define navigation panel structure:
 
-```
+```ruby
 navigation = Bootstrap::Navigation.new('My Site') do |nav|
   nav.primary do |n|
     n.link 'Dashboard', dashboard_path
