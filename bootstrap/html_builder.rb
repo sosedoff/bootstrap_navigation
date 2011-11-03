@@ -4,7 +4,7 @@ module Bootstrap
   module HtmlBuilder
     def build_navigation
       html = Builder::XmlMarkup.new(:indent => 2)
-      html.a(self.title, :class => "brand")
+      html.a(self.title, :href => self.url, :class => "brand")
       
       build_section(html, primary_menu) if primary_menu
       build_section(html, secondary_menu) if secondary_menu

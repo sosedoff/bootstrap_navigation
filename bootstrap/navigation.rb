@@ -2,12 +2,13 @@ module Bootstrap
   class Navigation
     include Bootstrap::HtmlBuilder
     
-    attr_reader :title
+    attr_reader :title, :url
     attr_reader :primary_menu
     attr_reader :secondary_menu
     
-    def initialize(title)
-      @title      = title
+    def initialize(title, url='#')
+      @title = title
+      @url   = url
       yield self if block_given?
     end
     
