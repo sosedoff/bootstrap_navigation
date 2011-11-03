@@ -9,7 +9,7 @@ Define navigation panel structure:
 ```ruby
 navigation = Bootstrap::Navigation.new('My Site') do |nav|
   nav.primary do |n|
-    n.link 'Dashboard', dashboard_path
+    n.link 'Dashboard', dashboard_path, :active => true # this will make link active
     n.menu 'Dropdown Menu' do |m|
       m.link 'Submenu 1', '/hello/world'
       m.link 'Submenu 2', path_to_your_stuff
