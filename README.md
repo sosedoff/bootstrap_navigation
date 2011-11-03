@@ -39,3 +39,49 @@ navigation.render
 # In rails
 navigation.render.html_safe
 ```
+
+Produced output:
+
+```html
+<a href="#" class="brand">My Site</a>
+<ul class="nav">
+  <li>
+    <a href="/dashboard">Dashboard</a>
+  </li>
+  <li class="dropdown" data-dropdown="dropdown">
+    <a href="#" class="dropdown-toggle">Dropdown Menu</a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="/hello/world">Submenu 1</a>
+      </li>
+      <li>
+        <a href="path_to_your_stuff">Submenu 2</a>
+      </li>
+      <li>
+        <a href="#">Submenu 3</a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="http://yourstuff.com">Another item</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul class="nav secondary-nav">
+  <li class="dropdown" data-dropdown="dropdown">
+    <a href="#" class="dropdown-toggle">Currrent User</a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="#">Link 1</a>
+      </li>
+      <li>
+        <a href="#">Link 2</a>
+      </li>
+      <li class="divider"></li>
+      <li>
+        <a href="#">Logout</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+```
